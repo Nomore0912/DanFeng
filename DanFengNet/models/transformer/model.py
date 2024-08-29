@@ -363,6 +363,9 @@ class CausalLM(DFPreTrainedModel):
         loss = None
         if labels is not None:
             # Shift so that tokens < n predict n
+            # 示例： I am a student
+            # shift_logits -> [I am a]
+            # shift_labels -> [am a student]
             shift_logits = logits[..., :-1, :].contiguous()
             shift_labels = labels[..., 1:].contiguous()
             # Flatten the tokens
