@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 from embedding import RotaryEmbedding
-from transformers.cache_utils import Cache, DynamicCache
+from transformers.cache_utils import Cache
 import torch.nn.functional as F
 from torch import nn
 from typing import Optional, Tuple
